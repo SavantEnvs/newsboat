@@ -1,0 +1,9 @@
+project: savantenvs/newsboat
+target: fuzz_htmlrenderer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_htmlrenderer/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_htmlrenderer
+    libfuzzer: true
+    timeout: 5

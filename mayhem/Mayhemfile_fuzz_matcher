@@ -1,0 +1,9 @@
+project: savantenvs/newsboat
+target: fuzz_matcher
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_matcher/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_matcher
+    libfuzzer: true
+    timeout: 5

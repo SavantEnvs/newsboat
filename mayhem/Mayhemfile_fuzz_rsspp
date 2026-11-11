@@ -1,0 +1,9 @@
+project: savantenvs/newsboat
+target: fuzz_rsspp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_rsspp/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rsspp
+    libfuzzer: true
+    timeout: 5

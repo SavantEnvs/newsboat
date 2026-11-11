@@ -1,0 +1,1 @@
+title =~ ".*foo.*" or (author !~ "bar" and age between 1:5)

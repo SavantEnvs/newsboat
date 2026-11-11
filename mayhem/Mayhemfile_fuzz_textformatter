@@ -1,0 +1,9 @@
+project: savantenvs/newsboat
+target: fuzz_textformatter
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_textformatter/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_textformatter
+    libfuzzer: true
+    timeout: 5
